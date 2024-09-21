@@ -25,17 +25,17 @@
 </table>
 
 ## Introduction
-💎 FPGA-Gym is the first diverse suite of scalable reinforcement learning environments based on FPGA technology.
+💎 PEARL is the first diverse suite of scalable reinforcement learning environments based on FPGA technology.
 
 It features very fast environment computation speed⚡️, large-scale parallelism🏅, and high flexibility🌊.
 
-🏠 FPGA-Gym provides a [Template](Template/Pipeline.v) for parallel reinforcement learning environments on FPGA.
+🏠 PEARL provides a [Template](Template/Pipeline.v) for parallel reinforcement learning environments on FPGA.
 Its modular and parameterized features allow users to conveniently customize new environments without extensive FPGA knowledge.
 
 🌌 It now features 7 environments based on this template!
 
 ## Environments
-FPGA-Gym currently offers a variety of environments, including classical control, gridworld, and strategy games🌍. 
+PEARL currently offers a variety of environments, including classical control, gridworld, and strategy games🌍. 
 We are committed to continually expanding and enhancing the range of environments available.
 | Environment                           | Category | Registered Version(s)                                           | Source  | Reference |
 |---------------------------------------|----------|------------------------------------------------------------------|---------|-------------|
@@ -55,20 +55,20 @@ we provide the verilog template and python template, The hierarchical structure 
         * [`Compute.v`](Template/Compute.v) This file defines the number of hardware compute resources. 
             * [`Compute_Single.v`](Template/Compute_Single.v) This file defines a single environment compute logic. This corresponds to a computational resource on the development board. If the user wants to add a new environment, they need to customize this file. We add CartPole as example in the template.
 * [`FPGAEnv.py`](Template/FPGAEnv.py) This file defines the parent class. After inheriting the parent class, different environment son classes need to modify the main places as follows.
-Please see the ["How to Add New Environments Using the FPGA-Gym Template"](User_Guide/Add_New_Environments.md) for details on how to add your own environment to the template.
+Please see the ["How to Add New Environments Using the PEARL Template"](User_Guide/Add_New_Environments.md) for details on how to add your own environment to the template.
 
 ## Quickstart
-If the environment you need is already available in the FPGA-Gym library, we provide a guide on ["How to Use the FPGA-Gym Library"](User_Guide/Use_the_FPGA-Gym_Library.md). 
+If the environment you need is already available in the PEARL library, we provide a guide on ["How to Use the PEARL Library"](User_Guide/Use_the_PEARL_Library.md). 
 
-If the environment you need is not available in the FPGA-Gym library, we provide instructions on ["How to Add New Environments Using the FPGA-Gym Template"](User_Guide/Write _Single_Environment_Compute_in_Verilog.md).
+If the environment you need is not available in the PEARL library, we provide instructions on ["How to Add New Environments Using the PEARL Template"](User_Guide/Write _Single_Environment_Compute_in_Verilog.md).
 
 Please see the ["How to Write Single Environment Compute in Verilog.md"](github/User_Guide) for details on how to add your own environment to the template.
 
 You can see an example in this [Video](https://www.bilibili.com/video/BV12tV4e1EVw/?vd_source=3bfa69ca5962fd1ea8f48c880ae9844c). We demo
-an example of PPO algorithm training based on FPGA-Gym.
+an example of PPO algorithm training based on PEARL.
 
 You can see an example in this [Video](https://youtu.be/hgF3JZtLvZw). We demo
-an example of how to write an atari game seaquest based on FPGA-Gym in verilog.
+an example of how to write an atari game seaquest based on PEARL in verilog.
 
 File include:
 1. VivadoProjectExample：
@@ -102,38 +102,16 @@ In building
 |-------------------------------|------------------|---------------------------------------------------------------------------|-------------|
 |  CPU                         |  [VectorEnv](https://gymnasium.farama.org/api/vector/)  | [Click]()                                                   | The base class for vectorized environments to run multiple independent copies of the same environment in parallel. | 
 |  CPU                         |  [EnvPool](https://github.com/sail-sg/envpool)  | [Click]()                                                   |   A C++-based batched environment pool with pybind11 and thread pool. |
-|  GPU                         |  [CuLE](https://github.com/NVlabs/cule) | [Click]()                                                   |   A CUDA port of the Atari Learning Environment (ALE) and is designed to accelerate the development and evaluation of deep reinforcement algorithms using Atari games. |
-|  GPU                         |  [Gymnax]()  | [Click]()                                                   |   Implements classic environments including classic control, bsuite, MinAtar and a collection of meta RL tasks. |
-|  GPU                         |  [Isaac Gym](https://github.com/isaac-sim/IsaacGymEnvs)  | [Click]()                                                   |   Implements classic environments including classic control, bsuite, MinAtar and a collection of meta RL tasks. |
-|  GPU                         |  [Brax](https://github.com/google/brax)   | [Click]()                                                   |  A differentiable physics engine that simulates environments made up of rigid bodies, joints, and actuators.|
-|  GPU                         |  [Jumanji](https://github.com/instadeepai/jumanji)   | [Click]()                                                   |  A diverse range of environments ranging from simple games to NP-hard combinatorial problems.|
-|  GPU                         |  [Pgx](https://github.com/sotetsuk/pgx) | [Click]()                                                   | provides classic board game environments like Backgammon, Shogi, and Go.|
-|  GPU                         |  [Craftax-Classic] | [Click]()                                                   | |
-
-|  GPU                         |  [xland-minigrid]() | [Click]()                                                   | provides Meta-RL gridworld environments in JAX inspired by MiniGrid and XLand. |
-
-
-[Sample Factory](https://github.com/alex-petrenko/sample-factory) is one of the fastest RL libraries focused on very efficient synchronous and asynchronous implementations of policy gradients (PPO)
-
-
-[JaxMARL](https://github.com/FLAIROx/JaxMARL) supports a wide range of commonly used MARL environments. 
-
-[Gigastep ](https://github.com/mlech26l/gigastep)
-
-WrapDrive
-
-Podracer
 
 
 ## Citation
 
-You can cite FPGA-Gym as:
+You can cite PEARL as:
 
 ```bibtex
-@misc{jiayili2024fpga-gym,
-  title={FPGA-Gym: An FPGA-Accelerated Reinforcement Learning Environment Simulation Framework},
-  author={Jiayi Li},
+@misc{fpga-developer2024PEARL,
+  title={PEARL: FPGA-Based Reinforcement Learning Acceleration with Pipelined Parallel Environments},
   year={2024},
   primaryClass={cs.LG},
-  url={https://github.com/Selinaee/FPGA_Gym},
+  url={https://github.com/fpga-developer/pearl},
 }
