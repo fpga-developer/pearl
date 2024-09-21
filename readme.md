@@ -1,5 +1,5 @@
 
-<h1 align="center"><img src="Docs/image/logo.png" alt="Description" width="200"/>
+<h1 align="center"><img src="Docs/image/logo-pearl.png" alt="Description" width="200"/>
 <h1 align="center">Parallel Reinforcement Learning Environments on FPGA 🌍</h1>
 
 
