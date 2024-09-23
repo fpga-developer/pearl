@@ -27,12 +27,17 @@
 ## Introduction
 💎 PEARL is the first diverse suite of scalable reinforcement learning environments based on FPGA technology.
 
-It features very fast environment computation speed⚡️, large-scale parallelism🏅, and high flexibility🌊.
+It features very fast environment computation speed⚡️, large-scale parallelism🏅, and high flexibility🌊. 
 
 🏠 PEARL provides a [Template](Template/Pipeline.v) for parallel reinforcement learning environments on FPGA.
 Its modular and parameterized features allow users to conveniently customize new environments without extensive FPGA knowledge.
 
-🌌 It now features 7 environments based on this template!
+💗You can see an example in this [Video](https://www.bilibili.com/video/BV12tV4e1EVw/?vd_source=3bfa69ca5962fd1ea8f48c880ae9844c). We demo
+an example of PPO algorithm training based on PEARL.
+
+💗You can see an example in this [Video](https://youtu.be/hgF3JZtLvZw). We demo an example of how to write an atari game seaquest based on PEARL in verilog.
+
+🌌 It now features **8** environments based on this template!
 
 ## Environments
 PEARL currently offers a variety of environments, including classical control, gridworld, and strategy games🌍. 
@@ -46,7 +51,7 @@ We are committed to continually expanding and enhancing the range of environment
 |  🕳️ CliffWalking                          | gridworld    | CliffWalking-v0                | [code](Environment/CliffWalking) | [Click](https://gymnasium.farama.org/environments/toy_text/cliff_walking/)    |
 | 🚕 Taxi                             | gridworld    | Taxi-v3                                 | [code](Environment/Taxi) | [Click](https://gymnasium.farama.org/environments/toy_text/taxi/)    |
 |🃏 Blackjack                   | strategy games    | Blackjack-v1                                            | [code](Environment/BlackJack) | [Click](https://gymnasium.farama.org/environments/toy_text/blackjack/)    |
-|🚢 Seaquest                   | Atari games    |          [Seaquest-v0](https://github.com/Selinaee/FPGA_Gym/blob/main/Environment/Atari/Seaquest/Seaquest_fig_210x160.py)                                  | [code](Environment/Seaquest) | [Click](https://atariage.com/manual_html_page.php?SoftwareLabelID=424)    |
+|🚢 Seaquest                   | Atari games    |          [Seaquest-v0](Environment/Atari/Seaquest/Seaquest_fig_210x160.py)                                  | [code](Environment/Atari/Seaquest) | [Click](https://atariage.com/manual_html_page.php?SoftwareLabelID=424)    |
 
 ## Template
 we provide the verilog template and python template, The hierarchical structure of the file is illustrated as follows:
@@ -72,7 +77,7 @@ an example of how to write an atari game seaquest based on PEARL in verilog.
 
 File include:
 1. VivadoProjectExample：
-   You can download the environment's Vivado project in this [URL](https://disk.pku.edu.cn/link/AAA5847B47B5C84CFD987D4B0A803A7CC0).
+   After double blind review, we will release the vivado project.
    It includes
    the template Vivado project
    the CartPole, CliffWalking, Pendulum, Blackjack Vivado project
