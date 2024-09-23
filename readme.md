@@ -32,10 +32,10 @@ It features very fast environment computation speed⚡️, large-scale paralleli
 🏠 PEARL provides a [Template](Template/Pipeline.v) for parallel reinforcement learning environments on FPGA.
 Its modular and parameterized features allow users to conveniently customize new environments without extensive FPGA knowledge.
 
-💗You can see an example in this [Video](https://www.bilibili.com/video/BV12tV4e1EVw/?vd_source=3bfa69ca5962fd1ea8f48c880ae9844c). We demo
+💗You can see an example in this [Video](https://www.youtube.com/watch?v=Ij1gyVdzMjk&t=5s). We demo
 an example of PPO algorithm training based on PEARL.
 
-💗You can see an example in this [Video](https://youtu.be/hgF3JZtLvZw). We demo an example of how to write an atari game seaquest based on PEARL in verilog.
+💗You can see an example in this [Video](https://www.youtube.com/watch?v=tbKIi9n67YY&t=7s). We demo an example of how to write an atari game seaquest based on PEARL in verilog.
 
 🌌 It now features **8** environments based on this template!
 
@@ -69,10 +69,10 @@ If the environment you need is not available in the PEARL library, we provide in
 
 Please see the ["How to Write Single Environment Compute in Verilog.md"](User_Guide) for details on how to add your own environment to the template.
 
-You can see an example in this [Video](https://www.bilibili.com/video/BV12tV4e1EVw/?vd_source=3bfa69ca5962fd1ea8f48c880ae9844c). We demo
+You can see an example in this [Video](https://www.youtube.com/watch?v=Ij1gyVdzMjk&t=5s). We demo
 an example of PPO algorithm training based on PEARL.
 
-You can see an example in this [Video](https://youtu.be/hgF3JZtLvZw). We demo
+You can see an example in this [Video](https://www.youtube.com/watch?v=tbKIi9n67YY&t=7s). We demo
 an example of how to write an atari game seaquest based on PEARL in verilog.
 
 File include:
